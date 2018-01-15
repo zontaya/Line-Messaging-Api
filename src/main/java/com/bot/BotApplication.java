@@ -43,6 +43,8 @@ public class BotApplication {
     public static void main(String[] args) {
         SpringApplication.run(BotApplication.class, args);
 
+        //test push message location
+
         LocationMessage locationMessage = new LocationMessage("suk sa wad", "khannatao", 13.8408249, 100.6618506);
 
         PushMessage pushMessage = new PushMessage(
@@ -176,8 +178,8 @@ public class BotApplication {
     public static boolean isValidEmailAddress(String email) {
         boolean result = true;
         try {
-            InternetAddress emailAddr = new InternetAddress(email);
-            emailAddr.validate();
+            InternetAddress emailAddress = new InternetAddress(email);
+            emailAddress.validate();
         } catch (AddressException ex) {
             result = false;
         }
